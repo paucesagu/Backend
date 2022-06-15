@@ -1,2 +1,12 @@
-const hello = "Hello World";
-console.log(hello);
+import {Express} from 'express';
+const express = require('express'); 
+const app = express();
+
+app.get("/", (req, res)=>{
+    res.send("Hello, world!");
+}
+)
+
+app.listen(8000, ()=>{
+    console.log("Server on port 8000")
+})
